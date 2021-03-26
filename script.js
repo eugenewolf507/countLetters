@@ -13,8 +13,8 @@ const letterCount_ESR = (str, letter) => {
   return result;
 };
 
-// Eugene with RegExp
-const letterCount_ER = (str, letter) => {
+// Eugene with RegExp and ForOf
+const letterCount_ERF = (str, letter) => {
   const startTime = Date.now();
   const re = new RegExp(`${letter}`);
   let acc = 0;
@@ -25,6 +25,9 @@ const letterCount_ER = (str, letter) => {
   return result;
 };
 
-console.log(letterCount_ESR(testStr, 'r')); // => 2
-console.log('--');
-console.log(letterCount_ER(testStr, 'r')); // => 2
+console.log('// Eugene with Split and Reduce');
+console.log(letterCount_ESR(testStr, 'r'));
+console.log('');
+console.log('// Eugene with RegExp and ForOf');
+console.log(letterCount_ERF(testStr, 'r'));
+console.log('');
